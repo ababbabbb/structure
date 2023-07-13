@@ -213,25 +213,74 @@ class LinkedList:
 
 
 if __name__ == '__main__':
-    my_list = LinkedList(['一', '二', '三', '四', 5, 6])
-    print(len(my_list))  # 输出：6
-    print(my_list[0])  # 输出：1
-    my_list[0] = 0
-    print(my_list[0])  # 输出：0
-    del my_list[0]
-    print(my_list[0])  # 输出：2
-    my_list.append(6)
-    print(my_list[-1])  # 输出：6
-    my_list.insert(1, 1)
-    print(my_list[1])  # 输出：1
-    my_list.remove('三')
-    print(len(my_list))  # 输出：5
-    print(my_list.pop())  # 输出：6
-    for item in my_list:
-        print(item)
-
-    print(my_list)
-    print('end')
-
-    # list -> 动态数组 -> 数组
-    # 链表 -> node
+    # 测试上述自定义数据结构，并给出完整测试用例 。
+    # 1.测试初始化
+    print('1.测试初始化')
+    l = LinkedList([1, 2, 3, 4, 5])
+    print(l)
+    print('2.测试索引')
+    print(l[0])
+    print(l[-1])
+    print(l[1:3])
+    print(l[1:-1])
+    print(l[1:-1:2])
+    print('3.测试长度')
+    print(len(l))
+    print('4.测试迭代')
+    for i in l:
+        print(i)
+    print('5.测试包含')
+    print(1 in l)
+    print(6 in l)
+    print('6.测试加法')
+    print(l + LinkedList([6, 7, 8]))
+    print('7.测试加法赋值')
+    l += LinkedList([6, 7, 8])
+    print(l)
+    print('8.测试字符串')
+    print(str(l))
+    print('9.测试追加')
+    l.append(9)
+    print(l)
+    print('10.测试扩展')
+    l.extend([10, 11, 12])
+    print(l)
+    print('11.测试插入')
+    l.insert(0, 0)
+    print(l)
+    l.insert(1, 1.5)
+    print(l)
+    l.insert(-1, 13)
+    print(l)
+    print('12.测试删除')
+    l.remove(0)
+    print(l)
+    l.remove(13)
+    print(l)
+    print('13.测试弹出')
+    print(l.pop(0))
+    print(l)
+    print(l.pop())
+    print(l)
+    print('14.测试清空')
+    l.clear()
+    print(l)
+    print('15.测试索引')
+    l = LinkedList([1, 2, 3, 4, 5])
+    print(l.index(1))
+    print(l.index(5))
+    print('16.测试计数')
+    print(l.count(1))
+    print(l.count(6))
+    print('17.测试反转')
+    l.reverse()
+    print(l)
+    print('18.测试排序')
+    # l.sort()
+    # print(l)
+    # l.sort(reverse=True)
+    # print(l)
+    # l.sort(key=lambda x: -x)
+    # print(l)
+    # l.sort(key=lambda x: -x, reverse=True)
+    # print(l)
